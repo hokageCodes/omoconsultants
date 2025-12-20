@@ -7,6 +7,8 @@ import Button from '../ui/Button';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="w-full bg-white/80 backdrop-blur sticky top-0 z-40 border-b">
       <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between" style={{ height: '60px' }}>
@@ -30,7 +32,7 @@ export default function Navbar() {
 
         {/* Right: Call-to-Action Button (Hidden on Mobile) */}
         <div className="hidden md:block">
-          <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium">
+          <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium" onClick={closeMenu}>
             Get Consultation
           </Button>
         </div>
@@ -69,10 +71,10 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="flex flex-col gap-4 p-4">
-            <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-gray-900">Services</Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900">About</Link>
-            <Link href="/blog" className="text-sm font-medium text-gray-700 hover:text-gray-900">Blog</Link>
-            <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium">
+            <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>Services</Link>
+            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>About</Link>
+            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>Contact</Link>
+            <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium" onClick={closeMenu}>
               Get Consultation
             </Button>
           </div>

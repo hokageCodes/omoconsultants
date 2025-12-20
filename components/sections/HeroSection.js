@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-[90vh] bg-primary-light text-white flex items-center bg-cover bg-center"
+      className="relative min-h-[90vh] bg-primary-light text-white flex items-center bg-cover bg-center px-2"
       style={{ backgroundImage: "url('/research-hero.jpeg')" }}
     >
       {/* Background overlay */}
@@ -52,13 +52,19 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <button className="bg-accent text-primary-dark font-semibold px-8 py-4 rounded-md hover:bg-accent-light transition">
+          <a
+            href="/contact"
+            className="bg-accent text-primary-dark font-semibold px-8 py-4 rounded-md hover:bg-accent-light transition"
+          >
             Contact Us
-          </button>
+          </a>
 
-          <button className="border border-white/30 text-white px-8 py-4 rounded-md hover:bg-white/10 transition">
+          <a
+            href="/services"
+            className="border border-white/30 text-white px-8 py-4 rounded-md hover:bg-white/10 transition"
+          >
             Learn More
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
