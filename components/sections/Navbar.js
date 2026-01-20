@@ -2,25 +2,34 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import Button from '../ui/Button';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navItems = [
+    { href: '/services', label: 'Services' },
+    { href: '/about', label: 'About' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
+  const linkClass = (href) => {
+    const active = href === '/' ? pathname === '/' : pathname?.startsWith(href);
+    return active
+      ? 'text-teal-700 font-semibold'
+      : 'text-gray-700 hover:text-gray-900';
+  };
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <nav className="w-full bg-white/80 backdrop-blur sticky top-0 z-40 border-b">
       <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between" style={{ height: '60px' }}>
-        {/* Left: Navigation Links (Hidden on Mobile) */}
-        <div className="hidden md:flex gap-4">
-          <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-gray-900">Services</Link>
-          <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900">About</Link>
-          <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-gray-900">Contact</Link>
-        </div>
-
-        {/* Center: Logo */}
-        <Link href="/" className="flex items-center md:justify-center md:mx-0" style={{ marginLeft: '-20px' }}>
+        {/* Left: Logo */}
+        <Link href="/" className="flex items-center" style={{ marginLeft: '-20px' }}>
           <Image
             src="/logo-nobg.png"
             alt="Omo Consultants Logo"
@@ -30,9 +39,22 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Center: Navigation Links (Hidden on Mobile) */}
+        <div className="hidden md:flex gap-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`text-sm font-medium transition-colors ${linkClass(item.href)}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+
         {/* Right: Call-to-Action Button (Hidden on Mobile) */}
         <div className="hidden md:block">
-          <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium" onClick={closeMenu}>
+          <Button className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium" onClick={closeMenu}>
             Get Consultation
           </Button>
         </div>
@@ -71,10 +93,17 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="flex flex-col gap-4 p-4">
-            <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>Services</Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>About</Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-gray-900" onClick={closeMenu}>Contact</Link>
-            <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium" onClick={closeMenu}>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${linkClass(item.href)}`}
+                onClick={closeMenu}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium" onClick={closeMenu}>
               Get Consultation
             </Button>
           </div>

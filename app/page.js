@@ -4,6 +4,8 @@ import FAQs from "@/components/sections/FAQs";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Testimonials from "@/components/sections/Testimonials";
+import HowWeCanHelp from "@/components/sections/HowWeCanHelp";
+import Training from "@/components/sections/Training";
 
 export const metadata = {
   title: "OMO Consultants - Accelerating Innovation in Life Sciences",
@@ -15,9 +17,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <WhoWeAre />
       <CoreServices />
+      <HowWeCanHelp />
+      <WhoWeAre />
       <WhyChooseUs />
+      <Training />
       <Testimonials />
       <FAQs />
     </>

@@ -21,38 +21,39 @@ export default function ServicesPage() {
         <meta name="author" content="OMO Consultants" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <main className="bg-background text-text-primary">
+      <main className="bg-white text-gray-900">
         {/* ================= HERO ================= */}
-        <section className="max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center">
-          <div>
-            <span className="text-sm font-semibold tracking-wide text-accent">
-              What We Do
-            </span>
+      <section className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto py-20 px-2">
+        {/* Text Content */}
+        <div className="lg:w-1/2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            Pharmaceutical & Regulatory Expertise
+          </h1>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We partner with bio-pharmaceutical and medical device organisations to meet global regulatory expectations, safeguard quality, and confidently move products to market.
+          </p>
+        </div>
 
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mt-sm mb-md">
-              Pharmaceutical & Regulatory Expertise
-            </h1>
-
-            <p className="text-lg text-text-secondary max-w-xl">
-              We partner with bio-pharmaceutical and medical device organisations
-              to meet global regulatory expectations, safeguard quality, and
-              confidently move products to market.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
+        {/* Image Content */}
+        <div className="lg:w-1/2 flex justify-center">
+          <div className="relative">
             <Image
-              src="/Hands.jpeg"
-              alt="OMO Consultants Services"
-              width={520}
-              height={520}
-              className="rounded-2xl shadow-lg"
+              src="/about-hero.jpeg"
+              alt="Consultation in progress"
+              width={620}
+              height={620}
+              className="rounded-2xl shadow-xl"
             />
+            {/* Corner accents */}
+            <span className="hidden md:block absolute -top-6 -left-6 w-16 h-16 rounded-2xl border-t-4 border-l-4 border-teal-500" />
+            <span className="hidden md:block absolute -bottom-6 -right-6 w-16 h-16 rounded-2xl border-b-4 border-r-4 border-teal-500" />
           </div>
-        </section>
+        </div>
+      </section>
+
 
         {/* ================= SERVICES ================= */}
-        <section className="max-w-7xl mx-auto px-6 py-3xl space-y-3xl">
+        <section className="max-w-7xl mx-auto px-4 py-20 space-y-16">
           {/* SERVICE BLOCK */}
           <ServiceBlock
             title="Quality Assurance"
@@ -157,13 +158,13 @@ function ServiceBlock({
   children,
 }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-xl border-t border-border pt-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 border-t border-gray-200 pt-12">
       <div>
-        <h2 className="font-heading text-2xl font-bold mb-sm">{title}</h2>
-        <p className="text-text-secondary">{summary}</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-3">{title}</h2>
+        <p className="text-gray-600">{summary}</p>
       </div>
 
-      <div className="lg:col-span-2 space-y-md text-text-secondary leading-relaxed">
+      <div className="lg:col-span-2 space-y-4 text-gray-600 leading-relaxed">
         {children}
       </div>
     </div>

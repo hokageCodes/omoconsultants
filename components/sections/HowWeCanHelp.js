@@ -1,47 +1,72 @@
-import React from 'react';
+import React from "react";
+import { ShieldCheck, FileText, Activity, Package } from "lucide-react";
 
-export default function FAQs() {
+const services = [
+  {
+    icon: ShieldCheck,
+    title: "Quality Assurance",
+    features: ["QMS Implementation", "Gap Analysis", "Vendor Audits"],
+  },
+  {
+    icon: FileText,
+    title: "Regulatory Compliance",
+    features: ["FDA & EMA Submissions", "Regulatory Strategy", "Post-Market Surveillance"],
+  },
+  {
+    icon: Activity,
+    title: "Clinical Services",
+    features: ["Clinical Evaluation", "GCP Auditing", "Trial Management"],
+  },
+  {
+    icon: Package,
+    title: "Specialised QP/RP",
+    features: ["Batch Release", "Responsible Person", "GDP Compliance"],
+  },
+];
+
+export default function HowWeCanHelp() {
   return (
-    <section className="py-16 bg-white text-primary-dark">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-          Frequently Asked Questions
-        </h2>
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-3">
+            OUR EXPERTISE
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            How We Can Help
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We provide end-to-end solutions tailored to your product lifecycle.
+          </p>
+        </div>
 
-        {/* FAQ Items */}
-        <div className="space-y-8">
-          {/* FAQ 1 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2">What services do you offer?</h3>
-            <p className="text-sm text-gray-700">
-              We offer consultancy services in Quality Assurance, Regulatory Compliance, Clinical Services, and Specialised QP & RP Services tailored to the Bio-Pharmaceutical and Medical Device industries.
-            </p>
-          </div>
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <service.icon className="w-6 h-6 text-teal-600" />
+              </div>
 
-          {/* FAQ 2 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2">How can OMO Consultants help my business?</h3>
-            <p className="text-sm text-gray-700">
-              Our team of experts provides tailored solutions to ensure compliance, streamline processes, and accelerate your projects in the life sciences industry.
-            </p>
-          </div>
+              {/* Title */}
+              <h3 className="text-lg font-bold text-gray-900 mb-4">{service.title}</h3>
 
-          {/* FAQ 3 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Do you provide training services?</h3>
-            <p className="text-sm text-gray-700">
-              Yes, we offer on-demand training in areas such as GMP, GDP, and regulatory compliance, leveraging our hands-on experience and expertise.
-            </p>
-          </div>
-
-          {/* FAQ 4 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2">How can I contact OMO Consultants?</h3>
-            <p className="text-sm text-gray-700">
-              You can reach us via email at info@omoconsultants.com or call us at +1 (555) 123-4567. We look forward to assisting you.
-            </p>
-          </div>
+              {/* Features */}
+              <ul className="space-y-2">
+                {service.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="text-teal-600 mt-0.5">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

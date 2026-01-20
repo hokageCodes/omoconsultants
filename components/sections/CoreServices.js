@@ -1,67 +1,119 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, FileCheck, Activity, PackageCheck } from "lucide-react";
+import { FlaskConical, Dna, Stethoscope } from "lucide-react";
 
-const services = [
+const sectors = [
   {
-    icon: ShieldCheck,
-    title: "Quality Assurance",
+    icon: FlaskConical,
+    title: "Bio-Pharma",
     description:
-      "Quality systems design, strategy, and implementation. Audit support and Health Authority inspection readiness.",
+      "Comprehensive support for pharmaceutical development, from R&D to manufacturing.",
+    features: ["GMP Auditing", "Supply Chain QA"],
   },
   {
-    icon: FileCheck,
-    title: "Regulatory Compliance",
+    icon: Dna,
+    title: "Biotechnology",
     description:
-      "Product life cycle compliance and medical device regulations consulting.",
+      "Innovative strategies for biotech startups and established firms scaling production.",
+    features: ["Process Validation", "Risk Management"],
   },
   {
-    icon: Activity,
-    title: "Clinical Services",
+    icon: Stethoscope,
+    title: "Medical Devices",
     description:
-      "Clinical trial process support, CTM management, and GCP audits.",
-  },
-  {
-    icon: PackageCheck,
-    title: "Specialized QP & RP Services",
-    description:
-      "MA/WDA license support, distribution, and supply chain compliance.",
+      "Navigating EU MDR and FDA regulations for safe, compliant device market entry.",
+    features: ["Tech File Preparation", "ISO 13485 Setup"],
   },
 ];
 
 export default function CoreServices() {
   return (
-    <section className="py-16 bg-primary-dark text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <motion.h2
-          initial={{ y: 15 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold mb-6 text-center"
-        >
-          Our Core Services
-        </motion.h2>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ y: 20 }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-primary-light rounded-lg p-6 text-center hover:bg-primary transition-colors duration-300"
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-12">
+          <div>
+            <motion.h2
+              initial={{ y: 15, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
             >
-              <service.icon className="w-12 h-12 mx-auto mb-4 text-accent" />
-              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-              <p className="text-sm text-text-muted">{service.description}</p>
+              Our Area of Expertise
+            </motion.h2>
+            <motion.p
+              initial={{ y: 15, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-gray-600 max-w-md"
+            >
+              Expert guidance across the most critical areas of modern life sciences.
+            </motion.p>
+          </div>
+          <motion.a
+            initial={{ y: 15, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            href="/services"
+            className="text-teal-600 font-semibold hover:text-teal-700 transition hidden md:block"
+          >
+            See all sectors →
+          </motion.a>
+        </div>
+
+        {/* Sectors Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {sectors.map((sector, index) => (
+            <motion.div
+              key={sector.title}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-lg border border-gray-200 p-8 hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <sector.icon className="w-6 h-6 text-teal-600" />
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{sector.title}</h3>
+
+              {/* Description */}
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                {sector.description}
+              </p>
+
+              {/* Features */}
+              <ul className="space-y-2">
+                {sector.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-sm text-gray-700">
+                    <span className="text-teal-600">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
+
+        {/* Mobile See all sectors link */}
+        <motion.div
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-8 md:hidden"
+        >
+          <a href="/services" className="text-teal-600 font-semibold hover:text-teal-700 transition">
+            See all sectors →
+          </a>
+        </motion.div>
       </div>
     </section>
   );

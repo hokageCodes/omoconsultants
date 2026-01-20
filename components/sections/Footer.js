@@ -1,122 +1,194 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Form submitted:", formData);
+  };
 
   return (
     <>
       {/* CTA Section */}
-      <section className="relative bg-primary overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/10 rounded-full blur-3xl" />
-          <div 
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          />
-        </div>
+      <section className="relative bg-teal-800 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Contact Info */}
+            <motion.div
+              initial={{ x: -30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="text-white"
+            >
+              {/* Heading */}
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                Ready to elevate your compliance standards?
+              </h2>
 
-        {/* CTA Content */}
-        <div className="relative max-w-4xl mx-auto px-6 py-20 text-center">
-          <motion.h2
-            initial={{ y: 15 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
-          >
-            Ready to Partner with{" "}
-            <span className="text-accent">Industry Experts?</span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 15 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Let us help you navigate regulatory compliance, quality assurance, and bring your products to market faster. Get in touch with our team today.
-          </motion.p>
-          <motion.div
-            initial={{ y: 15 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5 group"
+              {/* Description */}
+              <p className="text-teal-100 mb-8 leading-relaxed">
+                Schedule a preliminary consultation with our experts to discuss your project needs.
+              </p>
+
+              {/* Contact Details */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-teal-300" />
+                  <a href="mailto:consult@omoconsultants.com" className="text-teal-100 hover:text-white transition">
+                    consult@omoconsultants.com
+                  </a>
+                </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-teal-300 mt-0.5" />
+                  <span className="text-teal-100">
+                    12 Innovation Way, Science Park, Cambridge, UK
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-teal-300" />
+                  <a href="tel:+442071234567" className="text-teal-100 hover:text-white transition">
+                    +44 (0) 20 7123 4567
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Contact Form */}
+            <motion.div
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Get a Free Consultation
-              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40"
-            >
-              Explore Our Services
-            </Link>
-          </motion.div>
+              <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl">
+                {/* Name Fields */}
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-600 mb-2">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Jane"
+                      className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-teal-600 focus:bg-white transition outline-none"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-600 mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Doe"
+                      className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-teal-600 focus:bg-white transition outline-none"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Email Field */}
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="jane@company.com"
+                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-teal-600 focus:bg-white transition outline-none"
+                    required
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div className="mb-6">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project..."
+                    rows="4"
+                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-teal-600 focus:bg-white transition outline-none resize-none"
+                    required
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-6 rounded-lg transition"
+                >
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Minimal Footer Bar */}
-      <footer className="bg-primary-dark border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      {/* Footer Bar */}
+      <footer className="bg-teal-900">
+        <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Logo Left */}
-            <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/logo-nobg.png"
-                alt="OMO Consultants"
-                width={120}
-                height={45}
-                className="object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </Link>
+            {/* Copyright */}
+            <div className="text-white/80 text-sm">
+              © {currentYear} OMO Consultants. All rights reserved.
+            </div>
 
-            {/* Nav Links Center */}
-            <nav className="flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-white/60 hover:text-accent text-sm transition-colors duration-200"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Legal Links Right */}
-            <div className="flex items-center gap-4 text-sm">
-              <span className="text-white/40 hidden lg:inline">
-                © {currentYear}
-              </span>
-              <Link href="/privacy" className="text-white/60 hover:text-accent transition-colors">
+            {/* Legal Links */}
+            <div className="flex items-center gap-6 text-sm">
+              <Link href="/privacy" className="text-white/80 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <span className="text-white/30">|</span>
-              <Link href="/terms" className="text-white/60 hover:text-accent transition-colors">
-                Terms
+              <Link href="/terms" className="text-white/80 hover:text-white transition-colors">
+                Terms of Service
               </Link>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>

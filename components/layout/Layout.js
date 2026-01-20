@@ -26,9 +26,6 @@ export default function Layout({ children }) {
     <div className="bg-background text-text-primary">
       <Navbar />
       <main>{children}</main>
-      <footer className="text-center py-6 bg-card">
-        <p className="text-sm text-text-secondary">© 2025 OMO Consultants. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

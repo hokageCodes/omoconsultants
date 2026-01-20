@@ -1,6 +1,6 @@
+import HowWeCanHelp from "@/components/sections/HowWeCanHelp";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Head from "next/head";
-import Button from "@/components/ui/Button";
-import FAQs from "@/components/sections/FAQs";
 
 export const metadata = {
   title: "Contact Us - OMO Consultants",
@@ -33,132 +33,54 @@ export default function ContactPage() {
           </p>
         </section>
 
-        {/* ================= MAIN SECTION ================= */}
-        <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 py-12 px-6">
-          {/* -------- FORM -------- */}
-          <div className="bg-card rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-heading font-bold mb-6">
-              Send a Message
-            </h2>
-            <p className="text-sm text-text-secondary mb-6">
-              Fill out the form below and our team will get back to you within 24
-              hours.
-            </p>
-            <form className="space-y-6">
-              {/* Name */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-text-secondary"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="mt-1 block w-full rounded-lg border-border bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-text-secondary"
-                >
-                  Business Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="mt-1 block w-full rounded-lg border-border bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                  placeholder="john@company.com"
-                />
-              </div>
-
-              {/* Phone */}
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-text-secondary"
-                >
-                  Phone Number (Optional)
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="mt-1 block w-full rounded-lg border-border bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                  placeholder="+1 (555) 000-0000"
-                />
-              </div>
-
-              {/* Message */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-text-secondary"
-                >
-                  How can we help?
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  className="mt-1 block w-full rounded-lg border-border bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
-                  placeholder="Tell us about your project requirements..."
-                ></textarea>
-              </div>
-
-              <Button className="w-full">Send Message</Button>
-            </form>
-          </div>
-
-          {/* -------- INFO -------- */}
-          <div className="bg-card rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-heading font-bold mb-6">
-              Contact Information
-            </h2>
-            <ul className="space-y-4">
-              <li>
-                <p className="text-sm text-text-secondary">Call us directly</p>
-                <p className="text-lg font-semibold">+1 (555) 012-3456</p>
-                <p className="text-sm text-text-secondary">
-                  Mon–Fri: 9am – 6pm EST
-                </p>
-              </li>
-              <li>
-                <p className="text-sm text-text-secondary">Email support</p>
-                <p className="text-lg font-semibold">connect@omoconsultants.com</p>
-              </li>
-              <li>
-                <p className="text-sm text-text-secondary">Headquarters</p>
-                <p className="text-lg font-semibold">
-                  123 Innovation Dr, BioTech Park, NY 10012
-                </p>
-              </li>
-            </ul>
-
-            {/* Map Location */}
-            <div className="mt-8 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.438635847!2d3.325499!3d6.524379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b5c8b6d7a7f%3A0x5c8b6d7a7f!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1672537600000!5m2!1sen!2sng"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+      {/* Contact Methods */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-center">
+            <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Mail className="w-6 h-6 text-teal-600" />
             </div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">Email Us</h3>
+            <a href="mailto:connect@omoconsultants.com" className="text-teal-700 font-medium text-sm">
+              connect@omoconsultants.com
+            </a>
           </div>
-        </section>
 
-        <FAQs />
-      </main>
-    </>
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-center">
+            <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone className="w-6 h-6 text-teal-600" />
+            </div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">Call Us</h3>
+            <a href="tel:+15550123456" className="text-teal-700 font-medium text-sm">
+              +1 (555) 012-3456
+            </a>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-center">
+            <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-6 h-6 text-teal-600" />
+            </div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">Visit Us</h3>
+            <p className="text-gray-600 text-sm">
+              123 Innovation Dr<br />BioTech Park, NY 10012
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-center">
+            <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Clock className="w-6 h-6 text-teal-600" />
+            </div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">Business Hours</h3>
+            <p className="text-gray-600 text-sm">
+              Mon–Fri<br />9am – 6pm EST
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Contact Us */}
+      <HowWeCanHelp />
+    </main>
+  </>
   );
 }

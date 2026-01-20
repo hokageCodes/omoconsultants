@@ -34,19 +34,19 @@ export default function FAQs() {
   };
 
   return (
-    <section className="py-16 bg-background text-primary-dark">
-      <div className="max-w-3xl mx-auto px-6">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4">
         <motion.div
-          initial={{ y: 15 }}
-          whileInView={{ y: 0 }}
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
+          <span className="inline-block text-teal-600 font-semibold text-sm tracking-wider uppercase mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Frequently Asked Questions
           </h2>
         </motion.div>
@@ -55,14 +55,14 @@ export default function FAQs() {
           {faqs.map((faq, idx) => (
             <motion.div
               key={idx}
-              initial={{ y: 15 }}
-              whileInView={{ y: 0 }}
+              initial={{ y: 15, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="border border-border rounded-xl overflow-hidden bg-white shadow-sm"
+              className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm"
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-lg focus:outline-none transition bg-white hover:bg-gray-50"
+                className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-lg focus:outline-none transition bg-white hover:bg-gray-50 text-gray-900"
                 onClick={() => toggle(idx)}
                 aria-expanded={openIndex === idx}
               >
@@ -71,7 +71,7 @@ export default function FAQs() {
                   animate={{ rotate: openIndex === idx ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <ChevronDown className="w-5 h-5 text-accent flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-teal-600 flex-shrink-0" />
                 </motion.div>
               </button>
               <AnimatePresence>
@@ -83,7 +83,7 @@ export default function FAQs() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-5 text-text-secondary leading-relaxed">
+                    <div className="px-6 pb-5 text-gray-600 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
