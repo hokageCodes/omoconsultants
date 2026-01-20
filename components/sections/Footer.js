@@ -31,8 +31,8 @@ export default function Footer() {
     <>
       {/* CTA Section */}
       <section className="relative bg-teal-800 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column: Contact Info */}
             <motion.div
               initial={{ x: -30, opacity: 0 }}
@@ -42,12 +42,12 @@ export default function Footer() {
               className="text-white"
             >
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
                 Ready to elevate your compliance standards?
               </h2>
 
               {/* Description */}
-              <p className="text-teal-100 mb-8 leading-relaxed">
+              <p className="text-teal-100 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                 Schedule a preliminary consultation with our experts to discuss your project needs.
               </p>
 

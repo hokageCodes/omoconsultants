@@ -23,30 +23,30 @@ export default function ServicesPage() {
       </Head>
       <main className="bg-white text-gray-900">
         {/* ================= HERO ================= */}
-      <section className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto py-20 px-2">
+      <section className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-7xl mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         {/* Text Content */}
-        <div className="lg:w-1/2">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+        <div className="lg:w-1/2 w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
             Pharmaceutical & Regulatory Expertise
           </h1>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             We partner with bio-pharmaceutical and medical device organisations to meet global regulatory expectations, safeguard quality, and confidently move products to market.
           </p>
         </div>
 
         {/* Image Content */}
-        <div className="lg:w-1/2 flex justify-center">
-          <div className="relative">
+        <div className="lg:w-1/2 w-full flex justify-center">
+          <div className="relative w-full max-w-md lg:max-w-none">
             <Image
               src="/about-hero.jpeg"
               alt="Consultation in progress"
               width={620}
               height={620}
-              className="rounded-2xl shadow-xl"
+              className="rounded-2xl shadow-xl w-full h-auto"
             />
             {/* Corner accents */}
-            <span className="hidden md:block absolute -top-6 -left-6 w-16 h-16 rounded-2xl border-t-4 border-l-4 border-teal-500" />
-            <span className="hidden md:block absolute -bottom-6 -right-6 w-16 h-16 rounded-2xl border-b-4 border-r-4 border-teal-500" />
+            <span className="hidden md:block absolute -top-4 lg:-top-6 -left-4 lg:-left-6 w-12 lg:w-16 h-12 lg:h-16 rounded-2xl border-t-4 border-l-4 border-teal-500" />
+            <span className="hidden md:block absolute -bottom-4 lg:-bottom-6 -right-4 lg:-right-6 w-12 lg:w-16 h-12 lg:h-16 rounded-2xl border-b-4 border-r-4 border-teal-500" />
           </div>
         </div>
       </section>

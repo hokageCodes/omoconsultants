@@ -41,31 +41,31 @@ export default function CareersPage() {
 
   return (
     <main className="bg-white text-gray-900">
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="flex flex-col gap-6">
           <div>
-            <p className="text-sm font-semibold tracking-wide text-teal-600 uppercase">
+            <p className="text-xs sm:text-sm font-semibold tracking-wide text-teal-600 uppercase">
               Work with OMO
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-3">
               Browse our latest opportunities
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-base sm:text-lg">
               Shape the future of life sciences with us.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {jobs.map((job) => (
               <div
                 key={job.id}
-                className="border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col gap-3"
+                className="border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm flex flex-col gap-3"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <div>
-                    <p className="text-sm text-gray-500">{job.department} · {job.location}</p>
-                    <h2 className="text-xl font-semibold text-gray-900">{job.title}</h2>
-                    <p className="text-sm text-gray-500">{job.mode} · Posted {job.posted}</p>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs sm:text-sm text-gray-500 truncate">{job.department} · {job.location}</p>
+                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 break-words">{job.title}</h2>
+                    <p className="text-xs sm:text-sm text-gray-500">{job.mode} · Posted {job.posted}</p>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {job.tags.map((tag) => (

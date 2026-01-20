@@ -9,42 +9,42 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="py-12 px-2 bg-white text-gray-800">
+    <main className="py-6 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto py-20 px-2">
+      <section className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-7xl mx-auto py-12 sm:py-16 lg:py-20">
         {/* Text Content */}
-        <div className="lg:w-1/2">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+        <div className="lg:w-1/2 w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
             Excellence in Consultancy
           </h1>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             Providing our expertise to the pharmaceutical, bio-technological, and medical device industries, we deliver high-quality products that are safe and effective for patients while reducing time to market. Customer satisfaction remains our top priority as we evolve with the industry.
           </p>
         </div>
 
         {/* Image Content */}
-        <div className="lg:w-1/2 flex justify-center">
-          <div className="relative">
+        <div className="lg:w-1/2 w-full flex justify-center">
+          <div className="relative w-full max-w-md lg:max-w-none">
             <Image
               src="/about-hero.jpeg"
               alt="Consultation in progress"
               width={620}
               height={620}
-              className="rounded-2xl shadow-xl"
+              className="rounded-2xl shadow-xl w-full h-auto"
             />
             {/* Corner accents */}
-            <span className="hidden md:block absolute -top-6 -left-6 w-16 h-16 rounded-2xl border-t-4 border-l-4 border-teal-500" />
-            <span className="hidden md:block absolute -bottom-6 -right-6 w-16 h-16 rounded-2xl border-b-4 border-r-4 border-teal-500" />
+            <span className="hidden md:block absolute -top-4 lg:-top-6 -left-4 lg:-left-6 w-12 lg:w-16 h-12 lg:h-16 rounded-2xl border-t-4 border-l-4 border-teal-500" />
+            <span className="hidden md:block absolute -bottom-4 lg:-bottom-6 -right-4 lg:-right-6 w-12 lg:w-16 h-12 lg:h-16 rounded-2xl border-b-4 border-r-4 border-teal-500" />
           </div>
         </div>
       </section>
 
       {/* Mission Quote Section */}
-      <section className="py-16 px-2">
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gray-500 text-white rounded-2xl shadow-lg px-10 py-12 relative">
-            <span className="absolute left-8 top-6 text-white/50 text-4xl leading-none">“</span>
-            <blockquote className="text-2xl lg:text-3xl italic font-semibold text-center leading-relaxed">
+          <div className="bg-gray-500 text-white rounded-xl sm:rounded-2xl shadow-lg px-6 sm:px-10 py-8 sm:py-12 relative">
+            <span className="absolute left-4 sm:left-8 top-4 sm:top-6 text-white/50 text-3xl sm:text-4xl leading-none">"</span>
+            <blockquote className="text-lg sm:text-2xl lg:text-3xl italic font-semibold text-center leading-relaxed">
               Our mission is to empower businesses to achieve excellence, ensuring that every product we touch improves lives and meets the highest standards of quality.
             </blockquote>
           </div>
@@ -52,12 +52,12 @@ export default function AboutPage() {
       </section>
 
       {/* Mission and Vision Section */}
-      <section className="py-16 px-2 bg-gray-100">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Mission */}
-          <div className="bg-white rounded-2xl shadow-md p-10 text-center">
-            <h3 className="text-2xl font-bold text-teal-700 mb-4">Our Mission</h3>
-            <p className="text-base md:text-lg leading-relaxed text-slate-700">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-md p-6 sm:p-10 text-center">
+            <h3 className="text-xl sm:text-2xl font-bold text-teal-700 mb-3 sm:mb-4">Our Mission</h3>
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-700">
               Providing our expertise to the pharmaceutical, bio-technological, and medical device industries, we deliver high-quality products that are safe and effective for patients while reducing time to market. Customer satisfaction remains our top priority as we evolve with the industry.
             </p>
           </div>

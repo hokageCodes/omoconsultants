@@ -22,15 +22,15 @@ export default function ShareBar({ job }) {
   if (!shareLinks) return null;
 
   return (
-    <div className="flex items-center gap-2 text-sm font-semibold text-gray-900">
+    <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-gray-900">
       <span className="text-gray-600">Share this Job</span>
-      <a href={shareLinks.whatsapp} target="_blank" rel="noreferrer" className="underline text-teal-700">
+      <a href={shareLinks.whatsapp} target="_blank" rel="noreferrer" className="underline text-teal-700 whitespace-nowrap">
         WhatsApp
       </a>
       <a href={shareLinks.x} target="_blank" rel="noreferrer" className="underline text-teal-700">
         X
       </a>
-      <a href={shareLinks.linkedin} target="_blank" rel="noreferrer" className="underline text-teal-700">
+      <a href={shareLinks.linkedin} target="_blank" rel="noreferrer" className="underline text-teal-700 whitespace-nowrap">
         LinkedIn
       </a>
     </div>

@@ -6,9 +6,9 @@ import Button from "../ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] bg-white text-gray-900 flex items-center px-4 py-20">
+    <section className="relative min-h-[90vh] bg-white text-gray-900 flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column: Content */}
           <motion.div
             initial={{ x: -30, opacity: 0 }}
@@ -16,29 +16,29 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Eyebrow */}
-            <span className="inline-block mb-4 text-sm font-semibold text-teal-600 uppercase tracking-wide">
+            <span className="inline-block mb-3 sm:mb-4 text-xs sm:text-sm font-semibold text-teal-600 uppercase tracking-wide">
               Global Leader in Life Sciences
             </span>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 sm:mb-6 text-gray-900">
               We Design, Implement, and Support Quality Systems for Life Sciences
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
               We Support Bio-Pharmaceutical and Medical Device Companies with Quality and Compliance
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-md inline-block text-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-md inline-block text-center text-sm sm:text-base">
                 Request a Consultation
               </Button>
 
               <a
                 href="/services"
-                className="border-2 border-gray-900 text-gray-900 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition inline-block text-center"
+                className="border-2 border-gray-900 text-gray-900 font-semibold px-6 sm:px-8 py-3 rounded-md hover:bg-gray-100 transition inline-block text-center text-sm sm:text-base"
               >
                 View Our Services
               </a>
