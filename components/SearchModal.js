@@ -41,7 +41,7 @@ export default function SearchModal({ open, onClose, onSearch, results = [] }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center min-h-screen bg-black/60 backdrop-blur-sm" onClick={onClose}>
       <div
-        className="bg-white rounded-2xl shadow-2xl px-8 py-8 w-full max-w-md min-w-[340px] flex flex-col items-center relative"
+        className="bg-white rounded-2xl shadow-2xl px-4 sm:px-8 py-8 w-full max-w-md mx-4 flex flex-col items-center relative"
         onClick={e => e.stopPropagation()}
       >
         <button className="absolute top-3 right-3 text-gray-400 hover:text-gray-700" onClick={onClose} aria-label="Close">

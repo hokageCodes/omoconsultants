@@ -119,9 +119,9 @@ export default function Navbar() {
         onSearch={handleSearch}
         results={searchResults}
       />
-      <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between" style={{ height: '60px' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between" style={{ height: '60px' }}>
         {/* Left: Logo */}
-        <Link href="/" className="flex items-center select-none" style={{ marginLeft: '-20px' }}>
+        <Link href="/" className="flex items-center select-none px-2">
           <span
             className="text-xl md:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-teal-500 via-fuchsia-500 to-orange-400 bg-clip-text text-transparent drop-shadow-sm"
             style={{ letterSpacing: '0.04em', fontFamily: 'inherit' }}

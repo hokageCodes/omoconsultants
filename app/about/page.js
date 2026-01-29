@@ -73,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-20 px-2 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-6">
