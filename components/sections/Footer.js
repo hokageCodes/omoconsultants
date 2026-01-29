@@ -55,20 +55,20 @@ export default function Footer() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-teal-300" />
-                  <a href="mailto:consult@omoconsultants.com" className="text-teal-100 hover:text-white transition">
-                    consult@omoconsultants.com
+                  <a href="mailto:info@omoconsultants.com" className="text-teal-100 hover:text-white transition">
+                    info@omoconsultants.com
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-teal-300 mt-0.5" />
                   <span className="text-teal-100">
-                    12 Innovation Way, Science Park, Cambridge, UK
+                    Harben House, Harben Parade, London, NW3 6LH, United Kingdom
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-teal-300" />
-                  <a href="tel:+442071234567" className="text-teal-100 hover:text-white transition">
-                    +44 (0) 20 7123 4567
+                  <a href="tel:+442030262660" className="text-teal-100 hover:text-white transition">
+                    +44 (0) 203 026 2660
                   </a>
                 </div>
               </div>

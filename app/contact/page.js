@@ -41,8 +41,8 @@ export default function ContactPage() {
               <Mail className="w-6 h-6 text-teal-600" />
             </div>
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Email Us</h3>
-            <a href="mailto:connect@omoconsultants.com" className="text-teal-700 font-medium text-sm">
-              connect@omoconsultants.com
+            <a href="mailto:info@omoconsultants.com" className="text-teal-700 font-medium text-sm">
+              info@omoconsultants.com
             </a>
           </div>
 
@@ -51,8 +51,8 @@ export default function ContactPage() {
               <Phone className="w-6 h-6 text-teal-600" />
             </div>
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Call Us</h3>
-            <a href="tel:+15550123456" className="text-teal-700 font-medium text-sm">
-              +1 (555) 012-3456
+            <a href="tel:+442030262660" className="text-teal-700 font-medium text-sm">
+              +44 (0) 203 026 2660
             </a>
           </div>
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Visit Us</h3>
             <p className="text-gray-600 text-sm">
-              123 Innovation Dr<br />BioTech Park, NY 10012
+              Harben House, Harben Parade<br />London, NW3 6LH, United Kingdom
             </p>
           </div>
 

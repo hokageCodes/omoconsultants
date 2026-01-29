@@ -34,10 +34,11 @@ export default function HowWeCanHelp() {
             OUR EXPERTISE
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How We Can Help
+            Tailored Regulatory, Quality, Clinical & Compliance Support from Development to Market
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We provide end-to-end solutions tailored to your product lifecycle.
+            OMO Consultants provides comprehensive, end-to-end solutions designed to support your product at every stage of its lifecycle — from early development and regulatory approval to post-market compliance and ongoing quality assurance.
+            We partner with Life Sciences and FMCG companies to ensure products meet global regulatory standards, maintain inspection readiness, and reach the market safely, compliantly, and efficiently.
           </p>
         </div>
 

@@ -28,7 +28,7 @@ const values = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
             The Four Pillars of Our Values
           </motion.h2>
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <motion.div
               key={value.title}
@@ -61,18 +61,18 @@ export default function WhyChooseUs() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
+              className="text-center bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border-2 border-gray-100 hover:border-teal-300 hover:shadow-xl transition-all duration-300"
             >
               {/* Icon Circle */}
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-teal-600 flex items-center justify-center">
-                <value.icon className="w-10 h-10 text-teal-600" />
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-teal-600 border-4 border-teal-100 flex items-center justify-center shadow-lg">
+                <value.icon className="w-12 h-12 text-white" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed font-medium">
                 {value.description}
               </p>
             </motion.div>

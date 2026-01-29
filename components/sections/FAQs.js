@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "How can I contact OMO Consultants?",
     answer:
-      "You can reach us via email at info@omoconsultants.com or call us at +1 (555) 123-4567. We look forward to assisting you.",
+      "You can reach us via email at info@omoconsultants.com or call us at +44 (0) 203 026 2660. We look forward to assisting you.",
   },
 ];
 
