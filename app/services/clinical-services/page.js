@@ -43,7 +43,7 @@ export default function ClinicalServicesPage() {
       {/* How We Help */}
       <section className="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row-reverse items-center gap-8">
         <div className="md:w-1/2 w-full">
-          <img src="/services/serve1.jpg" alt="How We Help - Clinical Services" className="rounded-xl shadow-lg w-full object-cover" style={{maxHeight:'340px'}} />
+          <img src="/services/love.png" alt="How We Help - Clinical Services" className="rounded-xl shadow-lg w-full object-cover" style={{maxHeight:'340px'}} />
         </div>
         <div className="md:w-1/2 w-full">
           <h3 className="text-2xl md:text-3xl font-bold text-orange-600 mb-4">How We Help</h3>

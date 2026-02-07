@@ -24,10 +24,10 @@ export default function ContactPage() {
       <main className="bg-background text-text-primary">
         {/* ================= HERO ================= */}
         <section className="text-center py-20 px-6">
-          <h1 className="text-4xl font-heading font-bold mb-4">
+          <h1 className="text-5xl font-heading font-bold mb-4">
             Let’s Innovate Together
           </h1>
-          <p className="text-lg text-text-secondary mb-6">
+          <p className="text-lg text-text-secondary mb-6 max-w-2xl mx-auto">
             Expert guidance for the bio-pharmaceutical and medical device
             industries. Reach out to start your consultation today.
           </p>

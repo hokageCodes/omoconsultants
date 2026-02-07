@@ -24,6 +24,11 @@ export default function Navbar() {
         { label: 'Clinical Services', href: '/services/clinical-services' },
         { label: 'Specialised QP & RP', href: '/services/qp-rp' },
         { label: 'Pharmaceutical Training', href: '/services/training' },
+        { label: 'Global GMP Compliance', href: '/services/global-gmp-compliance' },
+        { label: 'FDA Remediation', href: '/services/fda-remediation' },
+        { label: 'Drug Representation', href: '/services/drug-representation' },
+        { label: 'Person-in-Plant Visitation', href: '/services/person-in-plant' },
+        { label: 'Complaint & HCP Interaction', href: '/services/complaint-hcp-interaction' },
       ],
     },
     { href: '/about', label: 'About' },
@@ -52,6 +57,11 @@ export default function Navbar() {
     { label: 'Clinical Services', href: '/services/clinical-services' },
     { label: 'Specialised QP & RP', href: '/services/qp-rp' },
     { label: 'Pharmaceutical Training', href: '/services/training' },
+    { label: 'Global GMP Compliance', href: '/services/global-gmp-compliance' },
+    { label: 'FDA Remediation', href: '/services/fda-remediation' },
+    { label: 'Drug Representation', href: '/services/drug-representation' },
+    { label: 'Person-in-Plant Visitation', href: '/services/person-in-plant' },
+    { label: 'Complaint & HCP Interaction', href: '/services/complaint-hcp-interaction' },
     { label: 'All Services', href: '/services' },
   ];
 
@@ -69,6 +79,11 @@ export default function Navbar() {
     { text: 'Clinical Services', href: '/services/clinical-services' },
     { text: 'Specialised QP & RP', href: '/services/qp-rp' },
     { text: 'Pharmaceutical Training', href: '/services/training' },
+    { text: 'Global GMP Compliance', href: '/services/global-gmp-compliance' },
+    { text: 'FDA Remediation', href: '/services/fda-remediation' },
+    { text: 'Drug Representation', href: '/services/drug-representation' },
+    { text: 'Person-in-Plant Visitation', href: '/services/person-in-plant' },
+    { text: 'Complaint & HCP Interaction', href: '/services/complaint-hcp-interaction' },
     // FAQs
     { text: 'We offer consultancy services in Quality Assurance, Regulatory Compliance, Clinical Services, and Specialised QP & RP Services tailored to the Bio-Pharmaceutical and Medical Device industries.', href: '/services' },
     { text: 'Our team of experts provides tailored solutions to ensure compliance, streamline processes, and accelerate your projects in the life sciences industry.', href: '/services' },
@@ -112,26 +127,26 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-white/80 backdrop-blur sticky top-0 z-40 border-b">
+    <nav className="fixed top-0 left-0 right-0 w-full bg-white/80 backdrop-blur z-40 border-b">
       <SearchModal
         open={searchOpen}
         onClose={handleCloseModal}
         onSearch={handleSearch}
         results={searchResults}
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between" style={{ height: '60px' }}>
+      <div className="w-full px-4 sm:px-6 py-3 grid grid-cols-[auto,1fr,auto] items-center min-h-[60px]">
         {/* Left: Logo */}
-        <Link href="/" className="flex items-center select-none px-2">
+        <Link href="/" className="flex items-center select-none justify-self-start">
           <span
-            className="text-xl md:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-teal-500 via-fuchsia-500 to-orange-400 bg-clip-text text-transparent drop-shadow-sm"
-            style={{ letterSpacing: '0.04em', fontFamily: 'inherit' }}
+            className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+            style={{ letterSpacing: '0.08em', fontFamily: 'inherit' }}
           >
             OMO CONSULTANTS
           </span>
         </Link>
 
         {/* Center: Navigation Links (Hidden on Mobile) */}
-        <div className="hidden md:flex gap-10 items-center">
+        <div className="hidden md:flex items-center justify-center gap-12 lg:gap-16">
           {navItems.map((item) =>
             item.dropdown ? (
               <div key={item.label} className="relative group">
@@ -169,49 +184,52 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Right: Search Icon & Call-to-Action Button (Hidden on Mobile) */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Right: Search Icon & CTA (Hidden on Mobile) + Mobile Menu Button */}
+        <div className="justify-self-end flex items-center">
+          <div className="hidden md:flex items-center gap-4">
+            <button
+              className="p-2 rounded-full hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              aria-label="Search"
+              onClick={() => setSearchOpen(true)}
+              type="button"
+            >
+              <Search className="w-7 h-7 text-teal-700" />
+            </button>
+            <Link href="#contact-form" className="inline-flex items-center justify-center rounded-md px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium">
+              Get Consultation
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
           <button
-            className="p-2 rounded-full hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-400"
-            aria-label="Search"
-            onClick={() => setSearchOpen(true)}
+            className="md:hidden text-gray-700 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
           >
-            <Search className="w-7 h-7 text-teal-700" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 6.75h16.5m-16.5 6.75h16.5"
+                />
+              )}
+            </svg>
           </button>
-          <Button className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium" onClick={closeMenu}>
-            Get Consultation
-          </Button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-700 focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-8 h-8"
-          >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 5.25h16.5m-16.5 6.75h16.5m-16.5 6.75h16.5"
-              />
-            )}
-          </svg>
-        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -228,9 +246,9 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium" onClick={closeMenu}>
+            <Link href="#contact-form" className="inline-flex items-center justify-center rounded-md px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium" onClick={closeMenu}>
               Get Consultation
-            </Button>
+            </Link>
           </div>
         </div>
       )}

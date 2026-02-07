@@ -26,7 +26,7 @@ export default function AboutPage() {
         <div className="lg:w-1/2 w-full flex justify-center">
           <div className="relative w-full max-w-md lg:max-w-none">
             <Image
-              src="/about-hero.jpeg"
+              src="/logo-nobg.png"
               alt="Consultation in progress"
               width={620}
               height={620}
@@ -87,7 +87,7 @@ export default function AboutPage() {
             {/* Image Card */}  
             <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/Health.jpeg"
+                src="/services/chess.jpg"
                 alt="Building quality blocks"
                 width={620}
                 height={720}

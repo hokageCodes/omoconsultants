@@ -29,8 +29,8 @@ export default function Footer() {
 
   return (
     <>
-      {/* CTA Section */}
-      <section className="relative bg-teal-800 overflow-hidden">
+      {/* CTA Section - contact form (linked by #contact-form from consultation CTAs) */}
+      <section id="contact-form" className="relative bg-teal-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column: Contact Info */}

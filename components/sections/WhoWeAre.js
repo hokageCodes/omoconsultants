@@ -18,11 +18,11 @@ export default function WhoWeAre() {
           >
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/research-hero.jpeg"
+                src="/logo-nobg.png"
                 alt="Scientists collaborating"
-                width={600}
+                width={400}
                 height={400}
-                className="w-full h-auto object-cover"
+                className="object-cover mx-auto"
               />
             </div>
           </motion.div>

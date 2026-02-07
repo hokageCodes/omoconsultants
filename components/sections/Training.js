@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BarChart3, GraduationCap } from "lucide-react";
@@ -28,10 +29,10 @@ export default function Training() {
 
             {/* Training Badges */}
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm">
+              <Link href="#contact-form" className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-teal-300 hover:shadow-md transition">
                 <BarChart3 className="w-5 h-5 text-teal-600" />
                 <span className="font-semibold text-gray-900">Book a Consultation</span>
-              </div>
+              </Link>
             </div>
           </motion.div>
 
@@ -45,7 +46,7 @@ export default function Training() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/research-hero.jpeg"
+                src="/pharma-training.jpg"
                 alt="Training session"
                 width={600}
                 height={400}

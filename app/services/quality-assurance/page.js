@@ -12,9 +12,9 @@ export default function QualityAssurancePage() {
         className="relative flex flex-col items-center justify-center min-h-[100vh] px-4"
         style={{
           backgroundImage:
-            'linear-gradient(to bottom, rgba(30,30,40,0.45) 0%, rgba(30,30,40,0.7) 100%), url(/services/serve1.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+            'linear-gradient(to bottom, rgba(15,15,25,0.7) 0%, rgba(15,15,25,0.85) 100%), url(/services/verify.avif)',
+          backgroundSize: 'contain',
+          backgroundPosition: 'right',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'scroll',
         }}
@@ -37,7 +37,7 @@ export default function QualityAssurancePage() {
       {/* Key Expertise */}
       <section className="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2 w-full">
-          <img src="/services/serve1.jpg" alt="Key Expertise - Quality Assurance" className="rounded-xl shadow-lg w-full object-cover" style={{maxHeight:'340px'}} />
+          <img src="/services/verify.avif" alt="Key Expertise - Quality Assurance" className="rounded-xl shadow-lg w-full object-contain  " style={{maxHeight:'340px'}} />
         </div>
         <div className="md:w-1/2 w-full">
           <h3 className="text-2xl md:text-3xl font-bold text-fuchsia-700 mb-4">Key Expertise</h3>
@@ -53,7 +53,7 @@ export default function QualityAssurancePage() {
       {/* How We Help */}
       <section className="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row-reverse items-center gap-8">
         <div className="md:w-1/2 w-full">
-          <img src="/services/training.jpg" alt="How We Help - Quality Assurance" className="rounded-xl shadow-lg w-full object-cover" style={{maxHeight:'340px'}} />
+          <img src="/services/love.png" alt="How We Help - Quality Assurance" className="rounded-xl shadow-lg w-full object-cover" style={{maxHeight:'340px'}} />
         </div>
         <div className="md:w-1/2 w-full">
           <h3 className="text-2xl md:text-3xl font-bold text-orange-600 mb-4">How We Help</h3>

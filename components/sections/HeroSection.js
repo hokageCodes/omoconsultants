@@ -1,25 +1,26 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import Button from "../ui/Button";
 const slides = [
   {
-    bg: "/hero.jpg",
+    bg: "/new-c.jpg",
     headline: "Your Mission Is Our Mission",
     subtext: "Accelerating safe, compliant, and high-quality healthcare products across global markets.",
   },
   {
-    bg: "/compliance1.jpg",
+    bg: "/eu-af.jpg",
     headline: "Product Registration & Compliance in the EU & Africa",
     subtext: "We support pharmaceutical, biotech, and medical device companies with product registration, regulatory submissions, and ongoing compliance across European and African markets.",
   },
   {
-    bg: "/globe.jpg",
+    bg: "/med-law.jpg",
     headline: "Simplifying Regulatory Pathways Across Global Markets",
     subtext: "Navigating complex regulatory frameworks to help secure approvals faster — without compromising compliance or patient safety.",
   },
   {
-    bg: "/heart.jpg",
+    bg: "/prod-reg.jpg",
     headline: "Quality Systems That Pass Global Inspections",
     subtext: "From GMP, GDP, ISO, and regulatory audits to inspection readiness — we build quality frameworks that meet international standards.",
   },
@@ -64,9 +65,9 @@ export default function HeroSection() {
                 {slide.subtext}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadein delay-200">
-                <Button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-md text-base shadow-lg">
+                <Link href="#contact-form" className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-md text-base shadow-lg">
                   Request a Consultation
-                </Button>
+                </Link>
                 <a
                   href="/services"
                   className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white/10 transition text-base shadow-lg"

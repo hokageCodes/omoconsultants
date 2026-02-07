@@ -38,7 +38,7 @@ export default function ServicesPage() {
         <div className="lg:w-1/2 w-full flex justify-center">
           <div className="relative w-full max-w-md lg:max-w-none">
             <Image
-              src="/about-hero.jpeg"
+              src="/services/drug.jpg"
               alt="Consultation in progress"
               width={620}
               height={620}
@@ -140,6 +140,66 @@ export default function ServicesPage() {
             <p>
               We collaborate closely with teams to align processes, people, and
               performance with long-term business objectives.
+            </p>
+          </ServiceBlock>
+
+          <ServiceBlock
+            title="Ensuring Global GMP Compliance"
+            summary="We support organisations in meeting international GMP standards through gap assessments, remediation planning, audit readiness, and ongoing compliance oversight."
+          >
+            <p>
+              We support organisations in meeting international GMP standards through gap assessments, remediation planning, audit readiness, and ongoing compliance oversight.
+            </p>
+            <p>
+              Our team helps you identify gaps, build robust remediation plans, and maintain inspection readiness so you can operate with confidence across global markets.
+            </p>
+          </ServiceBlock>
+
+          <ServiceBlock
+            title="FDA Remediation"
+            summary="Expert support to address FDA inspection findings, including 483 responses, CAPA development, remediation execution, and sustainable quality system improvements."
+          >
+            <p>
+              We provide expert support to address FDA inspection findings, including 483 responses, CAPA development, remediation execution, and sustainable quality system improvements.
+            </p>
+            <p>
+              From drafting responses and corrective actions to implementing lasting process changes, we help you resolve findings and strengthen your quality systems for the long term.
+            </p>
+          </ServiceBlock>
+
+          <ServiceBlock
+            title="Drug Representation"
+            summary="Regulatory and drug representation services to help organisations manage Health Authority interactions, maintain compliance, and ensure effective product oversight in target markets."
+          >
+            <p>
+              We offer regulatory and drug representation services to help organisations manage Health Authority interactions, maintain compliance, and ensure effective product oversight in target markets.
+            </p>
+            <p>
+              Our representation services provide a local or regional point of contact for regulators and support compliant market presence where you need it.
+            </p>
+          </ServiceBlock>
+
+          <ServiceBlock
+            title="Person-in-Plant Visitation"
+            summary="On-site person-in-plant support to monitor operations, oversee quality activities, and ensure compliance with regulatory and client expectations."
+          >
+            <p>
+              Our experienced consultants provide on-site person-in-plant support to monitor operations, oversee quality activities, and ensure compliance with regulatory and client expectations.
+            </p>
+            <p>
+              We deliver hands-on oversight at your facilities or your partners’, helping you maintain visibility and control over critical quality and compliance activities.
+            </p>
+          </ServiceBlock>
+
+          <ServiceBlock
+            title="Complaint & HCP Interaction"
+            summary="We manage product complaints and healthcare professional (HCP) interactions in line with regulatory requirements, ensuring accurate documentation, timely investigations, and compliant safety reporting."
+          >
+            <p>
+              We manage product complaints and healthcare professional (HCP) interactions in line with regulatory requirements, ensuring accurate documentation, timely investigations, and compliant safety reporting.
+            </p>
+            <p>
+              From intake and investigation through to closure and regulatory reporting, we help you meet pharmacovigilance and quality expectations while protecting patient safety.
             </p>
           </ServiceBlock>
         </section>
