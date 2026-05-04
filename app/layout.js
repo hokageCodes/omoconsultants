@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="overflow-x-hidden">
       <body className="overflow-x-hidden">
         <Navbar />
-        {children}
+        <div className="pt-16">{children}</div>
         <Footer />
       </body>
     </html>

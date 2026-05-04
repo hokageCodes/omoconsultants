@@ -114,7 +114,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-white/80 backdrop-blur sticky top-0 z-40 border-b">
+    <nav className="fixed inset-x-0 top-0 z-50 w-full border-b bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <SearchModal
         open={searchOpen}
         onClose={handleCloseModal}

@@ -9,6 +9,11 @@ body {
   max-width: 100%;
 }
 
+/* Fixed navbar: anchor jumps land below the bar */
+html {
+  scroll-padding-top: 4rem;
+}
+
 /* Removed gradient background and section dividers */
 body {
   /* Reset background */
