@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 
+const CONTACT_EMAIL = "Admin@omoconsultants.co.uk";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [formData, setFormData] = useState({
@@ -13,7 +15,6 @@ export default function Footer() {
     email: "",
     message: "",
   });
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -23,8 +24,14 @@ export default function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    const { firstName, lastName, email, message } = formData;
+    const subject = encodeURIComponent(
+      `Website enquiry from ${firstName} ${lastName}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${firstName} ${lastName}\nEmail: ${email}\n\n${message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -55,8 +62,8 @@ export default function Footer() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-teal-300" />
-                  <a href="mailto:info@omoconsultants.com" className="text-teal-100 hover:text-white transition">
-                    info@omoconsultants.com
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-teal-100 hover:text-white transition">
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
@@ -149,6 +156,10 @@ export default function Footer() {
                     required
                   />
                 </div>
+
+                <p className="mb-4 text-xs text-gray-500">
+                  Opens your email app to send to {CONTACT_EMAIL}.
+                </p>
 
                 {/* Submit Button */}
                 <button

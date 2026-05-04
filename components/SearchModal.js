@@ -76,7 +76,7 @@ export default function SearchModal({ open, onClose, onSearch, results = [] }) {
               ) : (
                 <ul className="space-y-2">
                   {results.map((item) => (
-                    <li key={item.href}>
+                    <li key={`${item.href}::${item.label}`}>
                       <a
                         href={item.href}
                         className="block px-3 py-2 rounded-lg hover:bg-teal-100 text-teal-700 font-semibold transition-colors text-base"

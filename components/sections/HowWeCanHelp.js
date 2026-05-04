@@ -5,7 +5,12 @@ const services = [
   {
     icon: ShieldCheck,
     title: "Quality Assurance",
-    features: ["QMS Implementation", "Gap Analysis", "Vendor Audits"],
+    features: [
+      "GxP Compliance",
+      "QMS Implementation",
+      "Gap Analysis",
+      "Vendor Audits",
+    ],
   },
   {
     icon: FileText,

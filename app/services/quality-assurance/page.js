@@ -42,7 +42,7 @@ export default function QualityAssurancePage() {
         <div className="md:w-1/2 w-full">
           <h3 className="text-2xl md:text-3xl font-bold text-fuchsia-700 mb-4">Key Expertise</h3>
           <ul className="list-disc pl-6 space-y-3 text-lg md:text-xl text-gray-700">
-            <li>GxP services and compliance</li>
+            <li>GxP Compliance</li>
             <li>Clinical program support</li>
             <li>Complex drug development environments</li>
             <li>Quality initiatives and control methodologies</li>

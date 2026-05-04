@@ -16,7 +16,7 @@ export default function ServicesPage() {
         <meta name="description" content={metadata.description} />
         <meta
           name="keywords"
-          content="pharmaceutical consultancy, medical device industries, quality assurance, regulatory compliance, clinical services, QP services, RP services, pharmaceutical training"
+          content="pharmaceutical consultancy, medical device industries, quality assurance, GxP compliance, regulatory compliance, clinical services, QP services, RP services, pharmaceutical training"
         />
         <meta name="author" content="OMO Consultants" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,6 +59,9 @@ export default function ServicesPage() {
             title="Quality Assurance"
             summary="Ensuring product quality, compliance, and inspection readiness across the product lifecycle."
           >
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 font-medium">
+              <li>GxP Compliance</li>
+            </ul>
             <p>
               We implement robust quality initiatives and control methodologies
               aligned with global Health Authority expectations. Our expertise
